@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:17:39 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/19 17:59:30 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/19 18:32:52 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,47 @@ ClapTrap::~ClapTrap()
 void ClapTrap::attack(const std::string& target)
 {
 	if (this->_hitPoints > 0 && this->_energyPoints > 0)
+	{
+		std::cout << "with Claptrap's attack, " << target << " loses " << this->_attackDamage << " points!" << std::endl;
 		this->_energyPoints--;
+	}
 	else if (this->_hitPoints == 0)
-		std::cout << "cannot attack because there are not enough hit points!" << std::endl;
+		std::cout << "Claptrap cannot attack to " << target << " because he has no more hit points!" << std::endl;
+	else
+		std::cout << "Claptrap cannot attack to " << target << " because he has no more energy points!" << std::endl;
+}
+
+	void ClapTrap::beRepaired(unsigned int amount)
+	{
+		
+	if (this->_hitPoints > 0 && this->_energyPoints > 0)
+	{
+		std::cout << "Claptrap is repaired with " << amount << " hit points!" << std::endl;
+		this->_energyPoints--;
+		this->_hitPoints += amount;
+	}
+	else if (this->_hitPoints == 0)
+		std::cout << "Claptrap cannot be repaired because he has no more hit points!" << std::endl;
+	else
+		std::cout << "Claptrap cannot be repaired because he has no more energy points!" << std::endl;
+	
+	}
+
+void ClapTrap::takeDamage(unsigned int amount)
+{
+	if (this->_hitPoints > amount)
+	{
+		this->_hitPoints -= amount;
+		std::cout << "Claptrap " << this->_name << " got attacked and lost " << amount << " hit points!" << std::endl;
+	}
+	else if(this->_hitPoints > 0)
+	{
+		std::cout << "Claptrap " << this->_name << " got attacked and lost " << this->_hitPoints << " hip points!" << std::endl;;
+		this->_hitPoints = 0;	
+	}
+	else
+	{
+		std::cout << "Claptrap " << this->_name << " cannot be attacked because he has no more hit points to lose!" << std::endl;
+	}
+	std::cout << std::endl << "Claptrap " << this->_name << " has " << this->_hitPoints << " hit points left" << std::endl;
 }

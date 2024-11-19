@@ -6,7 +6,7 @@
 #    By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 15:07:19 by eperperi          #+#    #+#              #
-#    Updated: 2024/11/19 15:19:59 by eperperi         ###   ########.fr        #
+#    Updated: 2024/11/19 18:33:49 by eperperi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC				=	c++ #-g -fsanitize=address
 
 CFLAGS			=	-Wall -Werror -Wextra -std=c++11
 
-SRC_FILES		=	main.cpp ClapTrap.hpp ClapTrap.cpp
+SRC_FILES		=	main.cpp ClapTrap.cpp
 
 OBJ_DIR			=	./obj
 
