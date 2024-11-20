@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:11:59 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/19 18:37:02 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:09:07 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ int main()
 		ClapTrap b("Cody");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
-		a.attack("some other robot");
+		a.attack("Robocop");
 		a.takeDamage(2);
 		a.takeDamage(1);
 		a.beRepaired(3);
-		a.attack("some other robot");
+		a.attack("Robicon");
 		b.beRepaired(3);
 		for (int i = 0; i < 12; i++)
-			b.attack("Cody-clone");
+			b.attack("Cody-Clone");
 		b.beRepaired(3);
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}

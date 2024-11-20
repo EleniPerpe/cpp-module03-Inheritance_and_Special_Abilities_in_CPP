@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 15:18:36 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/20 17:23:33 by eperperi         ###   ########.fr       */
+/*   Created: 2024/11/20 17:13:20 by eperperi          #+#    #+#             */
+/*   Updated: 2024/11/20 18:12:16 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "FragTrap.hpp"
 
-#pragma once
-
-class ClapTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
-	protected:
+	private:
 		std::string _name;
-		unsigned int _hitPoints;
-		unsigned int _energyPoints;
-		unsigned int _attackDamage;
 	public:
-		ClapTrap();
-		ClapTrap(const std::string name);
-		ClapTrap(const ClapTrap& copy);
-		ClapTrap& operator=(const ClapTrap& copy);
-		~ClapTrap();
+		DiamondTrap();
+		DiamondTrap(const std::string &name);
+		DiamondTrap(const DiamondTrap &copy);
+		virtual ~DiamondTrap();
+		DiamondTrap &operator=(const DiamondTrap &copy);
 
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		void whoAmI();
+		void attack(std::string const &target);
 };

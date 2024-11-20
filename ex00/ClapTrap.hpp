@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:18:36 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/20 17:23:33 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:04:57 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-	protected:
+	private:
 		std::string _name;
 		unsigned int _hitPoints;
 		unsigned int _energyPoints;

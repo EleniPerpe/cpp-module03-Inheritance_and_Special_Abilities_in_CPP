@@ -6,17 +6,17 @@
 #    By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 15:07:19 by eperperi          #+#    #+#              #
-#    Updated: 2024/11/20 15:55:08 by eperperi         ###   ########.fr        #
+#    Updated: 2024/11/20 18:01:43 by eperperi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	serena
+NAME			=	diamond
 
 CC				=	c++ #-g -fsanitize=address
 
-CFLAGS			=	-Wall -Werror -Wextra -std=c++11
+CFLAGS			=	-Wall -Werror -Wextra -std=c++11 -Wshadow and -Wno-shadow
 
-SRC_FILES		=	main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC_FILES		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJ_DIR			=	./obj
 
