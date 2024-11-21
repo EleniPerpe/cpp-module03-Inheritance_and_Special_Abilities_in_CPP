@@ -6,12 +6,14 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:13:20 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/21 12:40:33 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:13:39 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+
+#pragma once
 
 class DiamondTrap : public ScavTrap, public FragTrap
 {

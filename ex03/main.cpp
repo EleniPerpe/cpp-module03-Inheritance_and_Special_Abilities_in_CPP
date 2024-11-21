@@ -6,50 +6,44 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:48:22 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/21 12:39:59 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:57:25 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+// #include "FragTrap.hpp"
+// #include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
-void	alice_rundown(void)
-{
-	ScavTrap alice("Alice");
-	FragTrap eleni("Fabian"); 
+void	traps_rundown(void)
+{	
+	std::cout << std::endl << "\033[1m \033[34m CONSTRUCTORS\033[0m" << std::endl << std::endl;
+	
+	ScavTrap scav("Alice");
+	FragTrap frag("Fabian"); 
+	DiamondTrap diamond("Eleni");
 
-	alice.attack("Bob");
-	alice.attack("Chris");
-	eleni.attack("Diana");
-	alice.attack("Elisa");
-	alice.attack("Fred");
-	alice.attack("Gemma");
-	eleni.attack("Henry");
-	eleni.attack("Isabella");
-	alice.attack("Jack");
-	alice.attack("Kevin");
-	alice.attack("Laura");
-	alice.attack("Mike");
-	alice.guardGate();
-	eleni.highFivesGuys();
+	std::cout << std::endl << "\033[1m \033[32m FUNCTION MEMBERS\033[0m" << std::endl << std::endl;
+
+	scav.attack("Bob");
+	scav.attack("Chris");
+	scav.guardGate();
+	frag.attack("Diana");
+	frag.attack("Fabian");
+	frag.highFivesGuys();
+	diamond.attack("Ramy");
+	diamond.attack("Thalia");
+	diamond.guardGate();
+	diamond.highFivesGuys();
+	diamond.whoAmI();
+	
+	std::cout << std::endl << "\033[1m \033[31m DESTRUCTORS\033[0m" << std::endl << std::endl;
+
+	std::cout << std::endl;
 }
 
-void	bob_rundown(void)
-{
-	ScavTrap	bob("Bob");
-
-	bob.takeDamage(1);
-	bob.attack("Jenne");
-	bob.attack("Eleni");
-	bob.attack("Mattias");
-	bob.attack("Fabian");
-	bob.guardGate();
-}
 
 int	main(void)
 {
-	std::cout << std::endl << std::endl << "Performing Alice's rundown..." << std::endl << std::endl;
-	alice_rundown();
-	std::cout << std::endl << std::endl << "Performing Bob's rundown..." << std::endl << std::endl;
-	bob_rundown();
+	std::cout << std::endl << std::endl << "\033[33m Performing Traps' rundown..." << std::endl << std::endl;
+	traps_rundown();
 }

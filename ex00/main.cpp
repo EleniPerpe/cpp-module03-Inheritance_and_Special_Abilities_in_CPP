@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:11:59 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/20 14:09:07 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 16:02:48 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int main()
 {
 	std::cout << "### TESTING CLAPTRAP ###\n" << std::endl;
+	
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
 		ClapTrap a;

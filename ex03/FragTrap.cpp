@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:31:14 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/21 12:39:19 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:50:45 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ FragTrap &FragTrap::operator=(const FragTrap &copy)
 		
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << this->_name << ": Have a high five" << std::endl << "  o/    \\o\n   |     |\n  / \\    /\\" << std::endl;
+	std::cout << "FragTrap " << this->_name << ": Have a high five" << std::endl << std::endl << "  o/    \\o\n   |     |\n  / \\    /\\" << std::endl << std::endl;
 }

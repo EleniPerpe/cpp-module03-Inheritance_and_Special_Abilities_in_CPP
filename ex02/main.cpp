@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:48:22 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/20 17:18:34 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 16:05:21 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,18 @@
 
 void	alice_rundown(void)
 {
-	ScavTrap alice("Alice");
-	FragTrap eleni("Fabian"); 
+	ClapTrap clap("Alice");
+	FragTrap frag("Fabian"); 
 
-	alice.attack("Bob");
-	alice.attack("Chris");
-	eleni.attack("Diana");
-	alice.attack("Elisa");
-	alice.attack("Fred");
-	alice.attack("Gemma");
-	eleni.attack("Henry");
-	eleni.attack("Isabella");
-	alice.attack("Jack");
-	alice.attack("Kevin");
-	alice.attack("Laura");
-	alice.attack("Mike");
-	alice.guardGate();
-	eleni.highFivesGuys();
-}
-
-void	bob_rundown(void)
-{
-	ScavTrap	bob("Bob");
-
-	bob.takeDamage(1);
-	bob.attack("Jenne");
-	bob.attack("Eleni");
-	bob.attack("Mattias");
-	bob.attack("Fabian");
-	bob.guardGate();
+	clap.attack("Bob");
+	clap.attack("Chris");
+	frag.attack("Diana");
+	frag.attack("Henry");
+	frag.highFivesGuys();
 }
 
 int	main(void)
 {
-	std::cout << std::endl << std::endl << "Performing Alice's rundown..." << std::endl << std::endl;
+	std::cout << std::endl << std::endl << "Performing Traps' rundown..." << std::endl << std::endl;
 	alice_rundown();
-	std::cout << std::endl << std::endl << "Performing Bob's rundown..." << std::endl << std::endl;
-	bob_rundown();
 }
