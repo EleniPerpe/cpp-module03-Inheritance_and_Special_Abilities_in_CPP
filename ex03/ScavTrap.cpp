@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:31:14 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/21 15:44:08 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 17:19:52 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 
 ScavTrap::ScavTrap(const std:: string &name) : ClapTrap(name)
 {
-	std::cout << "ScavTrap constructor with name \"" << _name << "\" is called" << std::endl;
+	std::cout << "ScavTrap constructor with parameter name \"" << _name << "\" is called" << std::endl;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;	
@@ -54,11 +54,11 @@ void ScavTrap::attack(const std::string &target)
 	// this->ClapTrap::attack(target);
 	if (this->_hitPoints > 0 && this->_energyPoints > 0)
 	{
-		std::cout << "with ScavTrap's attack, " << target << " loses " << this->_attackDamage << " points!" << std::endl;
+		std::cout << "With " << _name <<"'s attack, " << target << " loses " << this->_attackDamage << " points!" << std::endl;
 		this->_energyPoints--;
 	}
 	else if (this->_hitPoints == 0)
-		std::cout << "ScavTrap cannot attack to " << target << " because he has no more hit points!" << std::endl;
+		std::cout << "ScavTrap " << _name <<" cannot attack to " << target << " because he has no more hit points!" << std::endl;
 	else
-		std::cout << "ScavTrap cannot attack to " << target << " because he has no more energy points!" << std::endl;
+		std::cout << "ScavTrap " << _name <<" cannot attack to " << target << " because he has no more energy points!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:31:14 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/21 15:39:30 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 17:18:17 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ DiamondTrap::DiamondTrap()
 
 DiamondTrap::DiamondTrap(const std:: string &name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), _name(name)
 {
-	std::cout << "DiamondTrap constructor with name \"" << _name << "\" is called" << std::endl;
+	std::cout << "DiamondTrap constructor with parameter name \"" << _name << "\" is called" << std::endl;
 	this->_name = name;
 	this->_hitPoints = FragTrap::_hitPoints;
 	this->_energyPoints = ScavTrap::_energyPoints;

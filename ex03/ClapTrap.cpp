@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:17:39 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/21 15:36:36 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 17:19:27 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,13 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (this->_hitPoints > 0 && this->_energyPoints > 0)
 	{
-		std::cout << "with Claptrap's attack, " << target << " loses " << this->_attackDamage << " points!" << std::endl;
+		std::cout << "With " << _name <<"'s attack, " << target << " loses " << this->_attackDamage << " points!" << std::endl;
 		this->_energyPoints--;
 	}
 	else if (this->_hitPoints == 0)
-		std::cout << "Claptrap cannot attack to " << target << " because he has no more hit points!" << std::endl;
+		std::cout << "Claptrap " << _name <<" cannot attack to " << target << " because he has no more hit points!" << std::endl;
 	else
-		std::cout << "Claptrap cannot attack to " << target << " because he has no more energy points!" << std::endl;
+		std::cout << "Claptrap " << _name <<" cannot attack to " << target << " because he has no more energy points!" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -67,14 +67,14 @@ void ClapTrap::beRepaired(unsigned int amount)
 	
 if (this->_hitPoints > 0 && this->_energyPoints > 0)
 {
-	std::cout << "Claptrap is repaired with " << amount << " hit points!" << std::endl;
+	std::cout << "Claptrap " << _name <<" is repaired with " << amount << " hit points!" << std::endl;
 	this->_energyPoints--;
 	this->_hitPoints += amount;
 }
 else if (this->_hitPoints == 0)
-	std::cout << "Claptrap cannot be repaired because he has no more hit points!" << std::endl;
+	std::cout << "Claptrap " << _name <<" cannot be repaired because he has no more hit points!" << std::endl;
 else
-	std::cout << "Claptrap cannot be repaired because he has no more energy points!" << std::endl;
+	std::cout << "Claptrap " << _name <<" cannot be repaired because he has no more energy points!" << std::endl;
 
 }
 
