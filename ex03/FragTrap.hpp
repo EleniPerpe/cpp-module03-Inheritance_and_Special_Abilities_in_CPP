@@ -6,13 +6,13 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:13:20 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/20 17:16:25 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 12:24:57 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-class FragTrap : public ScavTrap
+class FragTrap : virtual public ClapTrap
 {
 	public:
 		FragTrap();

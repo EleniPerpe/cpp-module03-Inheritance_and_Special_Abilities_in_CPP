@@ -6,7 +6,7 @@
 #    By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 15:07:19 by eperperi          #+#    #+#              #
-#    Updated: 2024/11/20 18:01:43 by eperperi         ###   ########.fr        #
+#    Updated: 2024/11/21 11:55:48 by eperperi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME			=	diamond
 
 CC				=	c++ #-g -fsanitize=address
 
-CFLAGS			=	-Wall -Werror -Wextra -std=c++11 -Wshadow and -Wno-shadow
+CFLAGS			=	-Wall -Werror -Wextra -std=c++11 -Wshadow -Wno-shadow
 
 SRC_FILES		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
