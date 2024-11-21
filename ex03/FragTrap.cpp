@@ -6,13 +6,13 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:31:14 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/21 12:24:38 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 12:39:19 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ScavTrap()
+FragTrap::FragTrap() : ClapTrap()
 {
 	std::cout << "FragTrap default constructor is called" << std::endl;
 	this->_hitPoints = 100;
@@ -20,7 +20,7 @@ FragTrap::FragTrap() : ScavTrap()
 	this->_attackDamage = 30;
 }
 
-FragTrap::FragTrap(const std:: string &name) : ScavTrap(name)
+FragTrap::FragTrap(const std:: string &name) : ClapTrap(name)
 {
 	std::cout << "FragTrap constructor with name \"" << _name << "\" is called" << std::endl;
 	this->_hitPoints = 100;
@@ -28,7 +28,7 @@ FragTrap::FragTrap(const std:: string &name) : ScavTrap(name)
 	this->_attackDamage = 30;	
 }
 
-FragTrap::FragTrap(const FragTrap &copy) : ScavTrap(copy)
+FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
 	std::cout << "FragTrap copy constructor is called" << std::endl;
 }
@@ -40,7 +40,7 @@ FragTrap::~FragTrap()
 FragTrap &FragTrap::operator=(const FragTrap &copy)
 {
 	std::cout << "FragTrap assignment operator is called" << std::endl;
-	ScavTrap::operator = (copy);
+	ClapTrap::operator = (copy);
 	return *this;
 }
 		

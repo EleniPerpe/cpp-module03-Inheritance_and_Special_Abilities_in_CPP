@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:31:14 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/21 12:25:09 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 13:24:22 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ DiamondTrap::DiamondTrap() : ClapTrap("default_clap_trap")
 	this->_attackDamage = 30;
 }
 
-DiamondTrap::DiamondTrap(const std:: string &name) : ClapTrap("diamond_default_clap_name")
+DiamondTrap::DiamondTrap(const std:: string &name) : ClapTrap(name + "_clap_name")
 {
 	std::cout << "DiamondTrap constructor with name \"" << _name << "\" is called" << std::endl;
 	this->_hitPoints = 100;
@@ -31,7 +31,6 @@ DiamondTrap::DiamondTrap(const std:: string &name) : ClapTrap("diamond_default_c
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
 {
-	*this = copy;
 	std::cout << "DiamondTrap copy constructor is called" << std::endl;
 }
 
@@ -46,3 +45,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &copy)
 	return *this;
 }
 
+void DiamondTrap::attack(const std::string &target)
+{
+	ScavTrap::attack(target);
+}

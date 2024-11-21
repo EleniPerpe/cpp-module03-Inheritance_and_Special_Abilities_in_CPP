@@ -6,11 +6,12 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:48:22 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/20 17:18:34 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/11/21 12:39:59 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 void	alice_rundown(void)
 {
